@@ -1,7 +1,10 @@
 #include "stdio.h"
-/*
- *main:print in text in display
-*/
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ **/
 int main(void)
 {
 puts("\"Programming is like building a multilingual puzzle");
