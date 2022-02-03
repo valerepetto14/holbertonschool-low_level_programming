@@ -1,9 +1,11 @@
-#import "stdio.h";
+#include "stdio.h"
 /*
  *print in text in display
  *
+ * 
 */
-main(void)
+int main(void)
 {
 printf("Programming is like building a multilingual puzzle");
+return (0);
 }
