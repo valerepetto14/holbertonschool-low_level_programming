@@ -11,7 +11,7 @@ int main(void)
 
 for (x = 'a'; x <= 'z'; x++)
 {
-		if(x == 'q' || x == 'e')
+		if (x == 'q' || x == 'e')
 {
 		continue;
 }
@@ -21,5 +21,5 @@ for (x = 'a'; x <= 'z'; x++)
 }
 }
 putchar('\n');
-return(0);
+return (0);
 }
