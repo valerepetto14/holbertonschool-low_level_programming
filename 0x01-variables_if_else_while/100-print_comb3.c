@@ -8,7 +8,7 @@
 int main(void)
 {
 	int x;
-	
+
 	int a;
 
 	for (x = 0; x <= 8; x++)
@@ -17,15 +17,14 @@ int main(void)
 		{
 			putchar(x + '0');
 			putchar(a + '0');
-			if(x != 8 || a != 9)
+		if (x != 8 || a != 9)
 			{
- 			 putchar(',');
-			 putchar(' ');
+		putchar(',');
+		putchar(' ');
 			}
 			}
-			
-		} 
-	
-	putchar('\n');
-	return (0);
+
+}
+putchar('\n');
+return (0);
 }
