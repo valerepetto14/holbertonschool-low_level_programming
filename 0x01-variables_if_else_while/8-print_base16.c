@@ -12,10 +12,14 @@ int x;
 char a;
 
 for (x = 0; x <= 9; x++)
-putchar(x + '0');
+{
+	putchar(x + '0');
+}
 
-for (a = 'a'; x < 'g'; a++)
-putchar(a);
+for (a = 'a'; a <= 'f'; a++)
+{
+	putchar(a);
+}
 
 	putchar('\n');
 	return (0);
