@@ -14,9 +14,9 @@ char a;
 for (x = 0; x <= 9; x++)
 putchar(x + '0');
 
-for (a = 'a'; x <= 'f'; x++)
+for (a = 'a'; x < 'g'; a++)
 putchar(a);
 
 	putchar('\n');
-	return(0);
+	return (0);
 }
