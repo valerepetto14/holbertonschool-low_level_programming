@@ -13,6 +13,6 @@ for (x = 'a'; x <= 'z'; x++)
     {
 	putchar(x);
     }
-	putchchar('\n')
+	putchar('\n')
     return (0);
 }
