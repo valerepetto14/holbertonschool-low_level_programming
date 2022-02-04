@@ -13,7 +13,7 @@ for (x = 'a'; x <= 'z'; x++)
 {
 		if(x == 'q' || x == 'e')
 {
-			break;
+		continue;
 }
 	else
 {
