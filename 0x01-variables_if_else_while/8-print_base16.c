@@ -18,4 +18,5 @@ for (a = 'a'; x <= 'f'; x++)
 putchar(a);
 
 	putchar('\n');
+	return(0);
 }
