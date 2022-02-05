@@ -1,40 +1,30 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <time.h>
+#include<stdio.h>
 /**
- *  *  *  *  *  main - Entry point
- *   *   *   *  * Return: Always 1 (Success)
- *    *    *    *    *    *      **/
+ *main - entry
+ *Return: 0
+ */
 int main(void)
 {
-int x;
+	int n;
+	int m;
 
-int a;
-
-int b;
-
-int c;
-
-        for (x = 0; x <= 8; x++)
-        {
-                for (a = 0; a < 10; a++)
-                {
-                        	for (b = 0; b < 10; b++)
-				{
-					for (c = 1; 1 <= 9; c++)
-					{
-				putchar(x + '0');
-				putchar(a + '0');
-				putchar(' ');
-				putchar(b + '0');
-				putchar(c + '0');
-				putchar(';');
-				putchar(' ');
-                               		 }
-				}
+	for (n = 0; n <= 99; n++)
+	{
+		for (m = n + 1 ; m <= 99; m++)
+		{
+		putchar((n / 10) + '0');
+		putchar((n % 10) + '0');
+		putchar(' ');
+		putchar((m / 10) + '0');
+		putchar((m % 10) + '0');
+		if (n < 98)
+		{
+		putchar(',');
+		putchar(' ');
 		}
-	}	
-putchar('\n');
-return (0);
+		}
+	}
+	putchar('\n');
+	return (0);
 }
 
