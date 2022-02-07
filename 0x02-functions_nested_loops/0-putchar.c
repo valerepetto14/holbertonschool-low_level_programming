@@ -10,6 +10,7 @@ int main(void)
 
 		for (a = 0; a < 8; a++)
 			_putchar(x[a]);
-
+		
+		_putchar('\n');
 		return (0);
 }
