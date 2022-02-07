@@ -8,8 +8,8 @@
 
 int _islower(int c)
 {
-	if (islower(c) == 1)
-		return (0);
-	else
+	if (islower(c))
 		return (1);
+	else
+		return (0);
 }
