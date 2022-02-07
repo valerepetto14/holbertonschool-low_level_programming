@@ -1,10 +1,11 @@
 #include "main.h"
 /**
- * mian - daleeee
+ * main - daleeee
+ * return - 0
  **/
 int main(void)
 {
-	char x[8] ="_putchar";
+	char x[8] = "_putchar";
 	int a;
 
 		for (a = 0; a < 9; a++)
