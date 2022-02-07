@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_alphabet - abecedario 
+* print_alphabet - abecedario 
  **/
 void print_alphabet(void)
 {
