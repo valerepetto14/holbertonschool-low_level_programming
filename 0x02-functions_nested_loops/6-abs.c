@@ -5,5 +5,12 @@
  **/
 int _abs(int c)
 {
-return (c % 10);
+if (c >= 0)
+{
+return (c);
+}
+else
+{
+	return (-c);
+}
 }
