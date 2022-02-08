@@ -12,7 +12,8 @@ void times_table(void)
 		{
 			c = a * b;
 			if (b != 9)
-			{
+			{	
+				
 				if (c > 9)
 					{
 					numA = c % 10;
@@ -22,13 +23,18 @@ void times_table(void)
 					 _putchar(',');
 					 _putchar(' ');
 					}
-			else
-				{
+				else if (c == 0)
+					{
+					 _putchar(c + '0');
+					 _putchar(' ');	 
+					}	
+				else
+					{
+				_putchar(' ');
 				_putchar(c + '0');
 				_putchar(',');
 				_putchar(' ');
-				_putchar(' ');
-				}
+					}
 			}
 		else
 		{
