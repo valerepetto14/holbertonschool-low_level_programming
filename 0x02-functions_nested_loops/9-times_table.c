@@ -47,7 +47,8 @@ void times_table(void)
 				_putchar(numA + '0');
 				}
 			else
-				{
+			{
+				_putchar(' ');
 				_putchar(c + '0');
 				}
 	       	} 
