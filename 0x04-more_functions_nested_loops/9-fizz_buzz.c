@@ -16,7 +16,7 @@ int main(void)
 	if ((a % 5) == 5)
 		printf("Buzz");
 	else
-		printf("\i", a);
+		printf("%i", a);
 	}
 	return (0);
 }
