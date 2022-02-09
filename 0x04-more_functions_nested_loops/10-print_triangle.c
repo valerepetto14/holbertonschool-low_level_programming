@@ -1,14 +1,13 @@
-nclude "main.h"
+#include "main.h"
 /**
- *  print_tringle - diagonal
- *  @n: n
+ *  print_triangle - diagonal
+ *  @size: n
  **/
 void print_triangle(int size)
 {
-	int i;
-	int c;
+	int i, c;
 
-	if(size <= 0)
+	if (size <= 0)
 	{
 		_putchar('\n');
 	}
@@ -16,11 +15,17 @@ void print_triangle(int size)
 	{
 		for (i = 0; i < size; i++)
 		{
-			for (c = n; c <= size; c--)
+			for (c = 0; c <= size; c++)
 			{
-			_putchar('');	
+				if (c < (size - i))
+				{
+				_putchar(' ');
 			}
-		_putchar('\n');
+			else
+				_putchar('#');
+
 		}
+			_putchar('\n');
 	}
+}
 }
