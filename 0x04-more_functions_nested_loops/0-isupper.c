@@ -4,18 +4,18 @@
  ** @c: int
  ** Return: Always 0.
  **/
-
-int _isupper(int c){
+int _isupper(int c)
+{
 	int i;
 
-	for(i = 'A'; i <= 'Z'; i++)
+	for (i = 'A'; i <= 'Z'; i++)
 	{
 		if (i == c)
 		{
-			return (1);
 			break;
+			return (1);
 		}
-			
+
 		else
 			return (0);
 	}
