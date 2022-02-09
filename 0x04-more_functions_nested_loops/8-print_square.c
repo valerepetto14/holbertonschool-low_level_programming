@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *  print_diagonal - diagonal
+ *  print_square - diagonal
  *  @n: n
  **/
 void print_square(int size)
