@@ -10,11 +10,11 @@ int main(void)
 	for (a = 0; a <= 100; a++)
 	{
 	if ((a % 3) == 0 && (a % 5) == 0)
-		printf("FizzBuzz");
+		printf("FizzBuzz ");
 	if ((a % 3) == 3)
-		printf("Fizz");
+		printf("Fizz ");
 	if ((a % 5) == 5)
-		printf("Buzz");
+		printf("Buzz ");
 	else
 		printf("%i", a);
 	}
