@@ -13,7 +13,7 @@ int i;
 			_putchar(i + '0');
 
 	else
-		continue();
+		continue;
 	}
 	_putchar('\n');
 }
