@@ -1,18 +1,18 @@
 #include "main.h"
 /**
- *  print_square - diagonal
- *  @n: n
+ *print_square - diagonal
+ *@size: n
  **/
 void print_square(int size)
 {
 	int i;
 	int c;
 
-	if(size <= 0)
+	if (size <= 0)
 	{
 		_putchar('\n');
 	}
-	else if (n > 0)
+	else if (size > 0)
 	{
 	for (i = 0; i < size; i++)
 	{
@@ -22,7 +22,7 @@ void print_square(int size)
 		}
 		_putchar('\n');
 	}
+	}
 	else
 		_putchar('\n');
 	}
-}
