@@ -19,6 +19,7 @@ void print_triangle(int size)
 			{
 				if (c < (size - i))
 				{
+				if (c != 0)
 				_putchar(' ');
 			}
 			else
