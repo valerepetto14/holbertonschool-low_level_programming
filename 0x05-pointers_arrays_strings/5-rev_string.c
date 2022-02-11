@@ -10,7 +10,7 @@ void rev_string(char *s)
 	char b;
 
 	for (i = 0; i <= 10; i++)
-	{
+	{ 	_putchar(s[i]);
 		a[10 - i] = s[i];
 	}
 	for (i = 0 ; i <= 10; i++)
