@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 /**
  * puts2 - ddd
  *@str: 0
