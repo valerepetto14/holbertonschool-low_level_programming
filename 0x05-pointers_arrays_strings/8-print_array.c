@@ -9,9 +9,9 @@ void print_array(int *a, int n)
 {
 	int iter = 0;
 
-	while (iter <= n)
+	while (iter < n)
 	{
-		if (a[iter + 1] == '\0')
+		if (iter == n - 1)
 			printf("%d", a[iter]);
 		else
 		printf("%d, ", a[iter]);
