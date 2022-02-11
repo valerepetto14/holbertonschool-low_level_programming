@@ -7,8 +7,9 @@
 int _strlen(char *s)
 {
 	int cont = 0, iter = 0;
+	char *a[] = *s;
 
-	while (*s[iter] != < NULL)
+	while (*a[iter] != NULL)
 	{
 		iter++;
 		cont++;
