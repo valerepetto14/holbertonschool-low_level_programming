@@ -18,5 +18,6 @@ void print_array(int *a, int n)
 
 		iter++;
 	}
+	printf("\n");
 
 }
