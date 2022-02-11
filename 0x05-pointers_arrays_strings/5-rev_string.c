@@ -5,18 +5,15 @@
  * **/
 void rev_string(char *s)
 {
-	int i;
-	char a[10];
-	char b;
-
-	for (i = 0; i < 10; i++)
-	{ 
-		a[10 - i] = s[i];
-	}
-	for (i = 0 ; i <= 10; i++)
+	int i = 0, b = 0;
+	char * cont = s
+	while (s[i] != '\0')
 	{
-		b = a[i];
-		_putchar(b);
+		i++;
 	}
-	_putchar('\n');
+	for (b = 0; b <= i ; b++)
+	{		 
+		s[b] = cont[i - b]; 
+	} 
+	
 }
