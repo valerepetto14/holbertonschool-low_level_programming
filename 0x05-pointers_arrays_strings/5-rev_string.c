@@ -13,6 +13,7 @@ void rev_string(char *s)
 	{ 	_putchar(s[i]);
 		a[10 - i] = s[i];
 	}
+	_putchar('\n');
 	for (i = 0 ; i <= 10; i++)
 	{
 		b = a[i];
