@@ -6,10 +6,7 @@
  **/
 char *_strcpy(char *dest, char *src)
 {
-	int i = 0, a = 0;
-
-	delte [] dest;
-	dest = new char[];
+	int i = 0;
 
   	while (src[i] != '\n')
 		i++;
