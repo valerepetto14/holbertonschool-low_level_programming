@@ -11,12 +11,13 @@ char *cap_string(char *str)
 	if (str[0] >= 'a' && str[0] <= 'z')
 		str[0] = str[0] - 'a' + 'A';
 
-		while (str[cont] != '\0')
-		{
-			if (str[cont] == '\t' || str[cont] == ',' || str[cont] == ';' ||
-	str[cont] == '.' || str[cont] == ' ' || str[cont] == '!' ||
-	str[cont] == '?' || str[cont] == '"' || str[cont] == '(' ||
-	str[cont] == ')' || str[cont] == '{' || str[cont] == '}' || str[cont] == '\n')
+	while (str[cont] != '\0')
+	{
+		if (str[cont] == '\t' || str[cont] == ',' || str[cont] == ';' ||
+		str[cont] == '.' || str[cont] == ' ' || str[cont] == '!' ||
+		str[cont] == '?' || str[cont] == '"' || str[cont] == '(' ||
+		str[cont] == ')' || str[cont] == '{' || str[cont] == '}' || 
+		str[cont] == '\n')
 		{
 			if (str[cont + 1] >= 'a' && str[cont + 1] <= 'z')
 			{
