@@ -4,7 +4,7 @@
  * @s: 123
  *@*dest: 122
  *@*src: 1223
- *Return: 1
+ *Return: 2
  **/
 int _strlen(char *s);
 
