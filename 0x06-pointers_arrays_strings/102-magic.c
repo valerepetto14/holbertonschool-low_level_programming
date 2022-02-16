@@ -1,7 +1,8 @@
 #include <stdio.h>
-/*
+/**
  * main - 1111
- * */
+ * Return: 0
+ **/
 int main(void)
 {
 int n;
