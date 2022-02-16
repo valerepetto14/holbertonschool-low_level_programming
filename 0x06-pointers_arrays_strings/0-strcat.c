@@ -1,7 +1,10 @@
 #include "main.h"
-
 /**
- *char *_strcat
+ * _strcat -sss
+ *@s:dddd
+ *@*dest: 122
+ *@*src: 1223
+ *Return: 0
  **/
 int _strlen(char *s);
 
@@ -11,7 +14,7 @@ char *_strcat(char *dest, char *src)
 	int contsrc = _strlen(src);
 
 	for (a = contdest; a < contdest + contsrc; a++)
-	{	
+	{
 		if (c <= contsrc)
 		{
 		dest[a] = src[c];
@@ -21,6 +24,11 @@ char *_strcat(char *dest, char *src)
 	return (dest);
 }
 
+/**
+ *_strlen - 123
+ *@s: 123
+ *Return: 12
+ **/
 int _strlen(char *s)
 {
 		int cont = 0;
@@ -29,7 +37,7 @@ int _strlen(char *s)
 		a = s;
 
 		while (*a != 0)
-		{							
+		{
 			a++;
 			cont++;
 		}
