@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-*_strccmp- asd
+*_strcmp- asd
 *@s1: asd
 *@s2: asd
 *Return: asd
