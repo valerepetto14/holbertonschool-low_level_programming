@@ -2,7 +2,7 @@
 /**
  * cap_string - 111
  * @str: 111
- * Return: 1
+ * Return: 2
  **/
 char *cap_string(char *str)
 {
