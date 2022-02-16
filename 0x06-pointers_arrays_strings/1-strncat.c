@@ -1,13 +1,13 @@
 #include "main.h"
-
 /**
- * *_strncat - main
- * @*dest:
- * @*src
- * @n:
+ *_strncat - 123
+ *@s: 123
+ *@*dest: 123
+ *@*src: 123
+ *@*n: 123
+ *Return: 1
  **/
 int _strlen(char *s);
-
 char *_strncat(char *dest, char *src, int n)
 {
 	int contdest = _strlen(dest), a = 0, c = 0;
@@ -23,6 +23,11 @@ char *_strncat(char *dest, char *src, int n)
 	return (dest);
 }
 
+/**
+ *_strlen - 123
+ *@s: 123
+ *Return: 123
+**/
 int _strlen(char *s)
 {
 	int cont = 0;
