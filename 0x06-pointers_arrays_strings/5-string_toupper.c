@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #include "main.h"
+=======
+#ZZinclude "main.h"
+>>>>>>> d16758093711aaec10302ebd1c74486eb26c22f3
 /**
  *string_toupper - 
  **/

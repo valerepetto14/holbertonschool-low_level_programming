@@ -1,9 +1,15 @@
 #include "main.h"
 /**
+<<<<<<< HEAD
  * _strcat -sss
  *@s:dddd
  *@*dest: 122
  *@*src: 1223
+=======
+ *char *_strcat
+ *@dest:
+ *@src:
+>>>>>>> d16758093711aaec10302ebd1c74486eb26c22f3
  *Return: 0
  **/
 int _strlen(char *s);
