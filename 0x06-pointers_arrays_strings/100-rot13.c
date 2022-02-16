@@ -15,7 +15,10 @@ char *rot13(char *str)
 		for (i = 0; normal[i] != '\0'; i++)
 		{
 			if (str[cont] == normal[i])
+			{
 				str[cont] = rot13[i];
+				break;
+			}
 		}
 	}
 	return (str);
