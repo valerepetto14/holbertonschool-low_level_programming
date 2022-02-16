@@ -2,6 +2,9 @@
 
 /**
  *char *_strcat
+ *@dest:
+ *@src:
+ *Return: 0
  **/
 int _strlen(char *s);
 
