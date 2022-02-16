@@ -18,6 +18,7 @@ char *cap_string(char *str)
 			if (str[cont + 1] >= 'a' && str[cont + 1] <= 'z')
 			{
 				str[cont + 1] = str[cont + 1] - 'a' + 'A';
+				break;
 			}
 		}
 		cont++;
