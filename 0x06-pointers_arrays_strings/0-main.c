@@ -8,15 +8,6 @@
  *     */
 int main(void)
 {
-<<<<<<< HEAD
-	    char str[] = "Look up!\n";
-	        char *ptr;
-
-		    ptr = string_toupper(str);
-		        printf("%s", ptr);
-			    printf("%s", str);
-			        return (0);
-=======
 	    char s[] = "ROT13 (\"rotate by 13 places\", sometimes hyphenated ROT-13) is a simple letter substitution cipher.\n";
 	        char *p;
 
@@ -35,5 +26,4 @@ int main(void)
 								    printf("------------------------------------\n");
 								        printf("%s", s);
 									    return (0);
->>>>>>> d16758093711aaec10302ebd1c74486eb26c22f3
 }
