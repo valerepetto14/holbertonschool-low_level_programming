@@ -6,15 +6,17 @@
  **/
 char *rot13(char *str)
 {
-	int cont = 0 , i = 0;
-	char abc1[39]="ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM";
-	char abc2[39]="abcdefghijklmñopqrstuvwxyzabcdefghijklm":
+	int cont = 0, i = 0;
+	char normal[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char rot13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	while (str[cont] != '\n')
+	for (;str[cont] != '\0'; cont++)
 	{
-		while (str[cont])
+		for (i = 0; normal[i] != '\0' ; i++)
 		{
-			
-		}	
+		 	if(str[cont] == normal[i])
+				str[cont] = rot13[i];
+		}
 	}
+	return (str);
 }
