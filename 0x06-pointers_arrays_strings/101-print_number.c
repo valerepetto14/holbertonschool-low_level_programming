@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-*print_number - asd
+*print_number - asddd
 *@n: asd
 **/
 void print_number(int n)
