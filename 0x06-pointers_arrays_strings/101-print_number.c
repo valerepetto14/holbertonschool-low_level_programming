@@ -1,10 +1,9 @@
 #include "main.h"
 /**
-*reverse_array- asd
-*@a: asd
+*print_number - asd
 *@n: asd
 **/
-void reverse_array(int *a, int n)
+void print_number(int n)
 {
 	unsigned int a = 0, d = 0, cont = 0;
 
@@ -22,7 +21,7 @@ void reverse_array(int *a, int n)
 	while (d > 9)
 	{
 		d /= 10;
-		cout *= 10;
+		cont *= 10;
 	}
 	for (; cont >= 1; cont /= 10)
 		_putchar(((a / cont) % 10) + '0');
