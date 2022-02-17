@@ -6,12 +6,25 @@
 **/
 void reverse_array(int *a, int n)
 {
-	int sup, i;
+	unsigned int a = 0, d = 0, cont = 0;
 
-	for (i = n - 1; i >= n / 2; i--)
+	if (n < 0)
 	{
-		sup = a[n - 1 - i];
-		a[n - 1 - i] = a[i];
-		a[i] = sup;
+		_putchar('-');
+		n = n * -1;
 	}
+	else
+		a = n;
+
+	d = a;
+	cont = 1;
+
+	while (d > 9)
+	{
+		d /= 10;
+		cout *= 10;
+	}
+	for (; cont >= 1; cont /= 10)
+		_putchar(((a / cont) % 10) + '0');
+
 }
