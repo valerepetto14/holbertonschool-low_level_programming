@@ -9,14 +9,13 @@ char *_strstr(char *haystack, char *needle)
 {
 	int i;
 
-	while (*needle != '\0')
+	if (*needle != '\0')
 	{
 		for (i = 0; haystack[i] != '0'; i++)
 		{
 			if (haystack[i] == *needle)
 				return (haystack + i);
 		}
-	needle++;
 	}
 	return (0);
 }
