@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *_sqrt_recursion
+ *_sqrt_recursion - raiz cuadrada
  *@n: int
  *Return: int
  **/
