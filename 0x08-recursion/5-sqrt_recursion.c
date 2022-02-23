@@ -16,7 +16,9 @@ int _sqrt_recursion(int n)
 		return (n);
 
 	else if (n == 17)
+	{
 		return (-1);
+	}
 	else
 	{
 		smallcandidate = _sqrt_recursion(n >> 2) << 1;
