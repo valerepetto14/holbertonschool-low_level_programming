@@ -9,29 +9,30 @@
  *     **/
 int main(int argc, char *argv[])
 {
-	int i, res;
-	int *arr;
+	int i, j;
+	int res = 0;
+	char *arr;
 
 	if (argc == 1)
 	{
 		printf("0\n");
 	}
-	else if
+	else
 		{
-			for (i = 1; i <= argc; i++)
+			for (i = 1; i < argc; i++)
 			{
 				arr = argv[i];
-				for (j = 0; arr[j != '\0'; j++)
+				for (j = 0; arr[j] != '\0'; j++)
 				{
 					if (isdigit(arr[j] == 0))
 					{
-						pritf("Error\n");
+						printf("Error\n");
 						return (1);
-				}
+					}
 				}
 				res += atoi(argv[i]);
 			}
-		printf("%d\n", res);
+			printf("%d\n", res);
 		}
-		return (0);
+	return (0);
 }
