@@ -1,9 +1,16 @@
 #include "main.h"
 /**
 *print_number - asd
+<<<<<<< HEAD
 *@n: asd
 **/
 void print_number(int n)
+=======
+*@a: asd
+*@n: asd
+**/
+void print_number(int *a, int n)
+>>>>>>> 292a6a07ee78e46ad5fd1e6539365ffaa9dddf80
 {
 	unsigned int a = 0, d = 0, cont = 0;
 
