@@ -11,12 +11,15 @@ char *str_concat(char *s1, char *s2)
 	int largo1 = 0, largo2 = 0, larray = 0, i = 0;
 	char *array;
 
+	if (s1 == NULL || s2 == NULL)
+		return (0);
+
 	while (s1[largo1] != '\0')
 		largo1++;
 
 	while (s2[largo2] != '\0')
 		largo2++;
-
+	
 	array = malloc(sizeof(char) * (largo1 + largo2) + 1);
 
 	if (array == NULL)
