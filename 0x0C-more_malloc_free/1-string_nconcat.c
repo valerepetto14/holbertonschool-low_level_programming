@@ -27,13 +27,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 
 	if (n >= strlen(s2))
-		n = strlen(s2) + 2;
+		n = strlen(s2) + 1;
 
 	for (; larray < largo1; larray++)
 		array[larray] = s1[larray];
 
-	for (; larray < (largo1 + n); larray++)
-	{
+	for (; larray <= (largo1 + n); larray++)
+	{	if
 		if (i <= n)
 		{
 		array[larray] = s2[i];
