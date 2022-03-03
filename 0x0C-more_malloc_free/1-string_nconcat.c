@@ -29,7 +29,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n >= strlen(s2))
 		n = strlen(s2) + 1;
 	if (n <= strlen(s2))
-		array[n + 1] = '\0';
+		array[largo1 + (n + 1)] = '\0';
 
 	for (; larray < largo1; larray++)
 		array[larray] = s1[larray];
