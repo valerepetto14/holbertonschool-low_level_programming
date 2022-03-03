@@ -10,7 +10,7 @@
  **/
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int largo1 = 0, largo2 = 0, larray = 0, i = 0;
+	unsigned int, largo2 = 0, larray = 0, i = 0;
 	char *array;
 
 	if (s1 == NULL)
@@ -20,9 +20,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	while (s1[largo1] != '\0')
 		largo1++;
-
-	while (s2[largo2] != '\0')
-		largo2++;
 
 	array = malloc(sizeof(char) * (largo1 + n) + 1);
 
@@ -37,7 +34,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	for (; larray < (largo1 + n); larray++)
 	{
-		if (i < n)
+		if (i <= n)
 		{
 		array[larray] = s2[i];
 		i++;
