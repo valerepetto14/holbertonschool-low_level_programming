@@ -32,7 +32,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (; larray < largo1; larray++)
 		array[larray] = s1[larray];
 
-	for (; larray <= (largo1 + (n + 1); larray++)
+	for (; larray <= (largo1 + (n + 1)); larray++)
 	{
 		if (i <= n)
 		{
