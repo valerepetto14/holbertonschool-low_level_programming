@@ -29,8 +29,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (array == NULL)
 		return (NULL);
 
-	if (n >= strlen(s2))
-		n = strlen(s2) + 1;
+	if (n >= largo2)
+		n = largo2;
 
 	for (; larray < largo1; larray++)
 		array[larray] = s1[larray];
