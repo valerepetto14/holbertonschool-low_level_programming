@@ -11,7 +11,6 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int largo1 = 0, largo2 = 0, larray = 0, i = 0;
-
 	char *array;
 
 	if (s1 == NULL)
@@ -32,7 +31,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 
 	if (n >= strlen(s2))
-		n = strlen(s2);
+		n = strlen(s2) + 1;
 
 	for (; larray < largo1; larray++)
 		array[larray] = s1[larray];
