@@ -42,7 +42,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		i++;
 		}
 	}
-	array[largo1 + n] = '\n';
+	array[largo1 + n] = '\0';
 
 	return (array);
 }
