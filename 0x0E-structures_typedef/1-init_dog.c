@@ -1,0 +1,14 @@
+#include "dog.h"
+#include "stdio.h"
+/**
+ * init_dog - struct
+ * @d: dog
+ * @name: dog
+ * @age : dog
+ * @owner: dog
+ **/
+void init_dog(struct dog *d, char *name, float age, char *owner)
+{
+	if (d != NULL)
+		dog(name, age, owner);
+}
