@@ -1,5 +1,7 @@
 #include "dog.h"
 #include "stdlib.h"
+
+int largo(char *a);
 /**
  *new_dog - struct
  *@name: char
@@ -12,16 +14,15 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *perro;
 	int size = 0, size1 = 0, cont = 0, cont1 = 0;
 
-	while (name[size] != '\0')
-		size++;
+	if (name && owner)
+	{
+	size = largo(name);
 	size++;
-	while (owner[size1] != '\0')
-		size1++;
+	size1 = largo(owner);
 	size1++;
 	perro = malloc(sizeof(dog_t));
 	if (perro == NULL)
 		return (NULL);
-	/**NAME**/
 	perro->name = malloc(sizeof(char) * size);
 	if (perro->name == NULL)
 	{
@@ -33,7 +34,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		perro->name[cont] = name[cont];
 		cont++;
 	}
-	/** OWNER**/
+	perro->age = age;
 	perro->owner = malloc(sizeof(char) * size1);
 	if (perro->owner == NULL)
 	{
@@ -46,6 +47,21 @@ dog_t *new_dog(char *name, float age, char *owner)
 		perro->owner[cont1] = owner[cont1];
 		cont1++;
 	}
-	perro->age = age;
 	return (perro);
+	}
+	return (NULL);
 }
+/**
+ * largo - largo
+ * @a:char
+ * Return: int
+ **/
+int largo(char *a)
+{
+	int size = 0;
+
+	while (a[size] != '\0')
+	size++;
+	return (size);
+}
+
