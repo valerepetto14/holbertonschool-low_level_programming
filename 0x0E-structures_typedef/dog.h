@@ -1,7 +1,7 @@
-#ifndef MY_GUARD_
-#define MY_GUARD_
+#ifndef DOG_H
+#define DOG_H
 /**
- *  dog_t - struct
+ *dog_t - struct
  **/
 typedef struct dog dog_t;
 /**
