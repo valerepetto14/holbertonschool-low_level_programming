@@ -1,7 +1,15 @@
 #ifndef MY_GUARD_
 #define MY_GUARD_
+/**
+ *  dog_t - struct
+ **/
 typedef struct dog dog_t;
-
+/**
+*struct dog - struc
+*@name: name
+*@age: age
+*@owner: dueño
+**/
 struct dog
 {
 char * name;
