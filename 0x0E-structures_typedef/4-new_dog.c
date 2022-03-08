@@ -35,12 +35,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(perro);
 		return (NULL);
 	}
-	while (cont <= size)
+	while (name[cont])
 	{
 		perro->name[cont] = name[cont];
 		cont++;
 	}
-	while (cont1 <= size1)
+	while (owner[cont1])
 	{
 		perro->owner[cont1] = owner[cont1];
 		cont1++;
