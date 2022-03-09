@@ -26,5 +26,5 @@ int i = 0;
 		i++;
 	}
 	printf("Error\n");
-	exit(99);
+	return (NULL);
 }
