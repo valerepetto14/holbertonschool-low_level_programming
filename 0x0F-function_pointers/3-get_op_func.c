@@ -25,5 +25,5 @@ int i = 0;
 			return (ops[i].f);
 		i++;
 	}
-	return (1);
+exit(98);
 }
