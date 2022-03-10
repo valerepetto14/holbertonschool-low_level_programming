@@ -13,6 +13,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int iter;
 	int num;
 
+	if (n > 0)
+	{
 	if (separator != NULL)
 	{
 	va_start(parametros, n);
@@ -36,4 +38,5 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_end(parametros);
 	}
 	printf("\n");
+	}
 }
