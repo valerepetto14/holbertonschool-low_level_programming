@@ -15,28 +15,28 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	if (n > 0)
 	{
-	if (separator != NULL)
-	{
-	va_start(parametros, n);
-	for (iter = 1; iter <= n; iter++)
-	{
-		num = va_arg(parametros, int);
-		if (iter == n)
-			printf("%d", num);
+		if (separator != NULL)
+		{
+		va_start(parametros, n);
+		for (iter = 0; iter <= n; iter++)
+		{
+			num = va_arg(parametros, int);
+			if (iter == n - 1 && separator != NULL)
+				printf("%d", num);
+			else
+				printf("%d%s", num, separator);
+		}
+			va_end(parametros);
+		}
 		else
-			printf("%d%s", num, separator);
-	}
-	va_end(parametros);
-	}
-	else
-	{
-	for (iter = 0; iter < n; iter++)
-	{
-		num = va_arg(parametros, int);
-		printf("%d", num);
-	}
-	va_end(parametros);
-	}
+		{
+			for (iter = 0; iter < n; iter++)
+			{
+				num = va_arg(parametros, int);
+				printf("%d", num);
+			}
+		va_end(parametros);
+		}
 	}
 	printf("\n");
 }
