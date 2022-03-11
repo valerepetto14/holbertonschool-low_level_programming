@@ -1,11 +1,7 @@
 #include "variadic_functions.h"
 #include <stdio.h>
+#include <stdlib.h>
 #include <stdarg.h>
-
-void printchar(va_list a);
-void printstr(va_list a);
-void printint(va_list a);
-void printfloat(va_list a);
 /**
 *print_all - print
 *@format: char
@@ -15,14 +11,15 @@ void print_all(const char * const format, ...)
 	int i = 0, e;
 	char *separador = "";
 
-	op_t type[] = {
+	va_list lista;
+
+	types_t type[] = {
 	{'c', printchar},
 	{'s', printstr},
 	{'i', printint},
 	{'f', printfloat},
 	{'\0', NULL}
 			};
-	va_list lista;
 /**----VARIABLES---- **/
 	va_start(lista, format);
 	e = 0;
@@ -48,22 +45,22 @@ void print_all(const char * const format, ...)
 
 /**
   *printchar - p
-  *@a: c
+  *@c: c
 **/
-void printchar(va_list a)
+void printchar(va_list c)
 {
-	printf("%c", va_arg(a, int));
+	printf("%c", va_arg(c, int));
 }
 
 /**
  *printstr - p
- *@a: c
+ *@s: c
  **/
-void printstr(va_list a)
+void printstr(va_list s)
 {
 	char *str;
 
-	str = va_arg(a, char*);
+	str = va_arg(s, char*);
 
 	if (str == NULL)
 					{
@@ -74,17 +71,17 @@ void printstr(va_list a)
 }
 /**
  *printint - p
- *@a: i
+ *@i: i
  **/
-void printint(va_list a)
+void printint(va_list i)
 {
-	printf("%i", va_arg(a, int));
+	printf("%d", va_arg(i, int));
 }
 /**
  *printfloat - p
- *@a: f
+ *@f: f
  **/
-void printfloat(va_list a)
+void printfloat(va_list f)
 {
-	printf("%f", va_arg(a, double));
+	printf("%f", va_arg(f, double));
 }
