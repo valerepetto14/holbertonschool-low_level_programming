@@ -1,85 +1,90 @@
+#include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
-void printchar(char *c);
-void printstr(char *is);
-void printint(char *i);
-void printfloat(char *f);
 
+void printchar(va_list a);
+void printstr(va_list a);
+void printint(va_list a);
+void printfloat(va_list a);
 /**
 *print_all - print
 *@format: char
 **/
 void print_all(const char * const format, ...)
-{
+{ /**VARIABLES **/
+	int i = 0, e;
+	char *separador = "";
 
-	va_list ap;
-	char *form = "";
-
-	*form = *format;
-
-	va_start(ap, format);
-	while (*form)
+	op_t type[] = {
+	{'c', printchar},
+	{'s', printstr},
+	{'i', printint},
+	{'f', printfloat},
+	{'\0', NULL}
+			};
+	va_list lista;
+/**----VARIABLES---- **/
+	va_start(lista, format);
+	e = 0;
+	while (format != NULL && format[e] != '\0')
 	{
-
+		i = 0;
+		while (type[i].tipo != '\0')
+		{
+			if (type[i].tipo == format[e])
+			{
+				printf("%s", separador);
+				type[i].f(lista);
+				separador = ", ";
+			}
+			i++;
+		}
+		e++;
 	}
-	va_end(ap);
+	va_end(lista);
+	printf("\n");
 }
+/**------- FUNCIONES -------**/
 
 /**
- * printchar - p
- *@c: c
+  *printchar - p
+  *@a: c
 **/
-void printchar(char *c)
+void printchar(va_list a)
 {
-	printf("%c", c);
+	printf("%c", va_arg(a, int));
 }
-/**
-*get_op_func - dale
-*@s:char
-*Return: int
-**/
-int (*get_op_func(char *s))(int, int)
-{
-op_t ops[] = {
-{"+", op_add},
-{"-", op_sub},
-{"*", op_mul},
-{"/", op_div},
-{"%", op_mod},
-{NULL, NULL}
-};
 
-int i = 0;
-
-while (ops[i].op != NULL)
-	{
-		if (*ops[i].op == *s)
-			return (ops[i].f);
-		i++;
-	}
-	return (NULL);
-}
 /**
  *printstr - p
- *@s: c
+ *@a: c
  **/
-void printstr(char *s)
+void printstr(va_list a)
 {
-	printf("%s", s);
+	char *str;
+
+	str = va_arg(a, char*);
+
+	if (str == NULL)
+					{
+	printf("(nil)");
+	return;
+	}
+	printf("%s", str);
 }
 /**
  *printint - p
- *@i: i
+ *@a: i
  **/
-void printint(char *i)
+void printint(va_list a)
 {
-	printf("%i", i);
+	printf("%i", va_arg(a, int));
 }
 /**
  *printfloat - p
- *@f: f
+ *@a: f
  **/
-void printfloat(char *f)
+void printfloat(va_list a)
 {
-	printf("%f", f);
+	printf("%f", va_arg(a, double));
 }
