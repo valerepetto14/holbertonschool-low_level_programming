@@ -18,9 +18,4 @@ int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
-
-void printchar(char *c);
-void printstr(char *s);
-void printint(char *i);
-void printfloat(char *f);
 #endif
