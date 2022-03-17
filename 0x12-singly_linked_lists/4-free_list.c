@@ -12,9 +12,10 @@ void free_list(list_t *head);
 	list_t aux;
 
 	while (aux->next != NULL)
-	{	
+	{
 		aux = head;
 		head = head->next;
 		free(aux);
 	}
+	free(head);
 }
