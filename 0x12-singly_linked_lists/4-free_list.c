@@ -7,15 +7,19 @@
  *free_list - printea
  *@head: puntero
  **/
-void free_list(list_t *head);
+void free_list(list_t *head)
 {
-	list_t aux;
+	list_t *aux;
 
 	while (aux->next != NULL)
 	{
 		aux = head;
 		head = head->next;
+		free(aux->str);
+		free(aux->next);
 		free(aux);
 	}
+	free(head->str);
+	free(head->next);
 	free(head);
 }
