@@ -11,10 +11,11 @@
  **/
 int pop_listint(listint_t **head)
 {
-int date;
-if (*head == NULL)
-	return (0);
-date = (*head)->n;
-(*head) = (*head)->next;
-return (date);
+	int date;
+
+	if (*head == NULL)
+		return (0);
+	date = (*head)->n;
+	(*head) = (*head)->next;
+	return (date);
 }
