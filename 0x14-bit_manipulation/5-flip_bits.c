@@ -1,18 +1,18 @@
 #include "main.h"
+
 /**
-*flip_bits - get number of number a change
+*flip_bits - get number of bit
 *@n: binary
 *@m: binary
-*Return: number
+*Return: number of bit
 */
+
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	int count = 0, i = n ^ m;
+	unsigned int count = 0, i;
 
-	while (i != 0)
-	{
+	for (i = n ^ m; i != 0 && i > 0; i = i >> 1)
 		count += i & 1;
-		i = i >> 1;
-	}	
+
 	return (count);
 }
