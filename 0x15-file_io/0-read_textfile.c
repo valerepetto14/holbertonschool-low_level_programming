@@ -29,10 +29,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	cont = read(fd, buf, letters); /** TRATO DE LEER EL ARCHIVO **/
 	close(fd);
-	writes = write(0, buf, cont);/** TRATO DE ESCRIBIR EL CONTENIDO **/
+	writes = write(STDOUT_FILENO, buf, cont);/**TRATO DE ESCRIBIR EL CONTENIDO**/
 	if (cont == -1 || writes == -1)
-		return (0);
-	if (writes != cont)
 		return (0);
 	free(buf);
 	return (cont);
