@@ -9,8 +9,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buf;
 	int fd;
-	size_t cont = 0;
-	size_t validador = 0;
+	int validador = 0;
 
 	if (filename == NULL)
 		return (0);
@@ -20,19 +19,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fd == -1)
 		return (0);
 
-	buf = malloc(sizeof(letters); /**TRATO DE ABRIR EL ARCHIVO**/
+	buf = malloc(letters); /**TRATO DE ABRIR EL ARCHIVO**/
 
 	if (buf == NULL)
 	{
 		close(fd);
 		return (0);
 	}
-
-	cont = read(fd, buf, letters); /** TRATO DE LEER EL ARCHIVO **/
-	validador = write(0, buf, letters);/** TRATO DE ESCRIBIR EL CONTENIDO **/
-	if (validador != cont)
-		return (0);
+	read(fd, buf, letters); /** TRATO DE LEER EL ARCHIVO **/
 	close(fd);
+	validador = write(0, buf, letters);/** TRATO DE ESCRIBIR EL CONTENIDO **/
 	free(buf);
-	return (cont);
+	return (validador);
 }
