@@ -23,8 +23,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	cont = read(fd, buf, letters); /** TRATO DE LEER EL ARCHIVO **/
-	if (cont < letters)
-		return 0;
 	validador = write(0, buf, letters);/** TRATO DE ESCRIBIR EL CONTENIDO **/
 	if (validador == 0)
 	{
@@ -32,6 +30,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(fd);
 		return (0);
 	}
+	if (cont != validador)
+		return (0);
 	close(fd);
+	free(buf);
 	return (cont);
 }
