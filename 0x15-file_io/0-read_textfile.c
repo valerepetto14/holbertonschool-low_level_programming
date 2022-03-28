@@ -9,7 +9,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buf;
 	int fd;
-	int validador = 0;
+	int cont = 0;
+	int writes = 0;
 
 	if (filename == NULL)
 		return (0);
@@ -26,9 +27,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(fd);
 		return (0);
 	}
-	read(fd, buf, letters); /** TRATO DE LEER EL ARCHIVO **/
+	cont = read(fd, buf, letters); /** TRATO DE LEER EL ARCHIVO **/
 	close(fd);
-	validador = write(0, buf, letters);/** TRATO DE ESCRIBIR EL CONTENIDO **/
+	writes = write(0, buf, cont);/** TRATO DE ESCRIBIR EL CONTENIDO **/
+	if (writes != cont)
+		return (0);
 	free(buf);
-	return (validador);
+	return (cont);
 }
