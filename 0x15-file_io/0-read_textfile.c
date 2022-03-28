@@ -20,7 +20,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fd == -1)
 		return (0);
 
-	buf = malloc(sizeof(char) * letters); /**TRATO DE ABRIR EL ARCHIVO**/
+	buf = malloc(sizeof(letters); /**TRATO DE ABRIR EL ARCHIVO**/
 
 	if (buf == NULL)
 	{
