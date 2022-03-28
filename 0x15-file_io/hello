@@ -1,1 +1,3 @@
-world
+helloworld!
+ls -l
+./a.out hello world!
