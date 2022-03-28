@@ -30,7 +30,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(fd);
 		return (0);
 	}
-	if (validator != letters)
+	if (validador != letters)
 	{
 		close(fd);
 		free(buf);
