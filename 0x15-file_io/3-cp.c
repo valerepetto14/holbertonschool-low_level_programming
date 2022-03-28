@@ -8,7 +8,7 @@
 int main(int argc, char *argv[])
 {
 	int file1, file2;
-	int cont, writes, close1, close2;
+	int cont, writes, close1;
 	char buf[1024];
 
 	file1 = open(argv[1], O_RDONLY);
@@ -35,9 +35,9 @@ int main(int argc, char *argv[])
 
 	close1 = close(file1);
 	if (close1 == -1)
-		dprintf(2, "Error: Can't close fd %d\n", file1), exit(100);
-	close2 = close(file2);
-	if (close2 == -1)
+		dprintf(2, "Error: Can't close fd1 %d\n", file1), exit(100);
+	close1 = close(file2);
+	if (close1 == -1)
 		dprintf(2, "Error: Can't close fd %d\n", file2), exit(100);
 	return (0);
 }
