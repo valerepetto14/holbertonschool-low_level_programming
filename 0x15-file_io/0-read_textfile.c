@@ -15,12 +15,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (filename == NULL)
 		return (0);
 
-	fd = open(filename, O_RDONLY);
+	fd = open(filename, O_RDONLY);/**TRATO DE ABRIR EL ARCHIVO**/
 
 	if (fd == -1)
 		return (0);
 
-	buf = malloc(letters); /**TRATO DE ABRIR EL ARCHIVO**/
+	buf = malloc(letters);/**PIDO MEMORIA PARA GUARDAR LO QUE LEE**/
 
 	if (buf == NULL)
 	{
@@ -30,7 +30,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	cont = read(fd, buf, letters); /** TRATO DE LEER EL ARCHIVO **/
 	close(fd);
 	writes = write(STDOUT_FILENO, buf, cont);/**TRATO DE ESCRIBIR EL CONTENIDO**/
-	if (cont == -1 || writes == -1)
+	if (cont == -1 || writes == -1) /**PREGUNTO SI LO ANTERIOR FALLO**/
 		return (0);
 	free(buf);
 	return (cont);
