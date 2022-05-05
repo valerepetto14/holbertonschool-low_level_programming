@@ -1,22 +1,18 @@
 #include "lists.h"
 /**
- *delete_dnodeint_at_index - main
- *@head: list
- *@index: indice
- *Return: int
+ *delete_dnodeint_at_index - function that delets a node at certain position
+ *@head: pointer that points to the header
+ *@index: index
+ *Return: 1 or -1
  **/
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *aux = NULL;
 	dlistint_t *borrar = NULL;
-
 	unsigned int i = 0;
 
 	if (*head == NULL || head == NULL)
-	{
-		free(head);
 		return (-1);
-	}
 	aux = *head;
 	if (index == 0)
 	{
@@ -29,17 +25,14 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	for (; aux != NULL && i < index - 1; i++)
 		aux = aux->next;
 
-	if ((aux == NULL || aux->next == NULL))
+	if (aux == NULL || aux->next == NULL)
 	{
 		borrar = aux;
 		aux = aux->prev;
-		aux->next = NULL;
-		free(borrar);
 		return (1);
 	}
-	borrar = aux->next;
+	free(aux->next);
 	aux->next = aux->next->next;
-	aux->next->prev = aux;
-	free(borrar);
+
 	return (1);
 }
