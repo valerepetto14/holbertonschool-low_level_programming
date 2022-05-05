@@ -26,7 +26,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	for (; aux != NULL && i < index - 1; i++)
 		aux = aux->next;
 
-	if ((aux == NULL || aux->next == NULL)
+	if ((aux == NULL || aux->next == NULL))
 	{
 		borrar = aux;
 		aux = aux->prev;
