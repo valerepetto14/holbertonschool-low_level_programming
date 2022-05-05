@@ -13,8 +13,8 @@ int sum_dlistint(dlistint_t *head)
 		return (0);
 	while (aux->next != NULL)
 	{
-		aux = aux->next;
 		suma += aux->n;
+		aux = aux->next;
 	}
 	return (suma);
 }
