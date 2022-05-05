@@ -31,13 +31,13 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		aux = aux->next;
 		iter++;
 	}
+	aux = aux->prev;
 	if (aux->next == NULL)
 	{
 		aux->next = new_node;
 		new_node->prev = aux;
 		return (new_node);
 	}
-	aux = aux->prev;
 	new_node->next = aux->next;
 	new_node->prev = aux;
 	aux->next = new_node;
