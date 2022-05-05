@@ -5,7 +5,7 @@
 #include <string.h>
 
 /**
- *print_list - printea
+ *print_dlistint - printea
  *@h: puntero
  *Return: size
  **/
@@ -16,8 +16,7 @@ while (h != NULL)
 {
 	if (!h)
 		return (0);
-	else
-		 printf("%d\n", h->n);
+	printf("%d\n", h->n);
 	h = h->next;
 	n++;
 }
