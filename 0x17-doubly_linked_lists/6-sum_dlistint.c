@@ -11,8 +11,6 @@ int sum_dlistint(dlistint_t *head)
 
 	if (!head)
 		return (0);
-	while (aux->prev != NULL)
-		aux = aux->prev;
 	while (aux->next != NULL)
 	{
 		aux = aux->next;
