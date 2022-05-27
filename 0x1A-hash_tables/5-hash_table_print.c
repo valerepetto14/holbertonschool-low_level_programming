@@ -9,6 +9,8 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned long int iter = 0;
 	int cont = 0;
 
+	if (!ht)
+		return;
 	printf("{");
 	while (iter < ht->size)
 	{
