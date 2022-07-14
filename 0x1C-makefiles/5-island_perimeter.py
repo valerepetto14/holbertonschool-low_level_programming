@@ -4,14 +4,17 @@
 
 def island_perimeter(grid):
     """def function"""
-    m,n=len(grid), len(grid[0])
-        land, nei=0,0
-        for i in range(m):
-            for j in range(n):
-                if grid[i][j]==1:
-                    land+=1
-                    if i < m-1 and grid[i+1][j]==1:
-                        nei+=1
-                    if j < n-1 and grid[i][j+1]==1:
-                        nei+=1
-        return land*4-2*nei
+    row_num = len(grid)
+    if row_num == 0 or len(grid[0]) == 0:
+        return 0
+    islands, overlaps = 0, 0
+    col_num = len(grid[0])
+    for i in range(row_num):
+        for j in range(col_num):
+            if (grid[i][j] == 1):
+                islands += 1
+                if (i < row_num - 1 and grid[i + 1][j] == 1):
+                    overlaps += 1
+                if (j < col_num - 1 and grid[i][j + 1] == 1):
+                    overlaps += 1
+    return islands * 4 - overlaps * 2
