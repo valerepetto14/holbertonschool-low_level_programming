@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""def function"""
+
+
 def island_perimeter(grid):
     """def function"""
     m,n=len(grid), len(grid[0])
