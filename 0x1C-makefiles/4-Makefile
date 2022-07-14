@@ -1,12 +1,12 @@
-CC: gcc
-SRC: school.C main.c
-OBJ: $(SRC:%.c=%.o)
-NAME: school
-RM: rm -f
-CFLAGS: -Wall -Werror -Wextra -pedantic
+CC= gcc
+SRC= school.c main.c
+OBJ= $(SRC:%.c=%.o)
+NAME= school
+RM= rm -f
+CFLAGS= -Wall -Werror -Wextra -pedantic
 
 all:$(OBJ)
-	$(cc) $(CFLAGS) $(OBJ) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 clean:
 	$(RM) *~ $(NAME)
 oclean:
@@ -14,4 +14,4 @@ oclean:
 fclean:
 	clean oclean
 re:
-	all
+	oclean all
